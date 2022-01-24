@@ -38,4 +38,5 @@ kubectl get ing -n flaskr
 # verify tls certificate
 kubectl get cert -n flaskr
 
+
 ```
