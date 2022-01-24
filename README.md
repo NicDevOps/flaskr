@@ -39,4 +39,5 @@ kubectl get ing -n flaskr
 kubectl get cert -n flaskr
 
 
+
 ```
