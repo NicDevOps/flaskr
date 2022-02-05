@@ -3,10 +3,16 @@ kind: Service
 metadata:
   name: flaskr
 spec:
-  type: ClusterIP
+  # Expose the service on a static port on each node
+  # so that we can access the service from outside the cluster 
+  type: NodePort
   selector:
     app: flaskr
   ports:
-    - protocol: TCP
-      port: 8080
+    # Three types of ports for a service
+    # nodePort - a static port assigned on each the node
+    # port - port exposed internally in the cluster
+    # targetPort - the container port to send requests to
+    - nodePort: 30163
+      port: 8080 
       targetPort: 8080

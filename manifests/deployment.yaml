@@ -16,7 +16,7 @@ spec:
     spec:
       initContainers:
       - name: init-sqlite
-        image: deepvoid/flaskr
+        image: nicdevops/flaskr
         env:
           - name: FLASK_APP
             value: "flaskr"
@@ -28,7 +28,7 @@ spec:
           mountPath: /app/instance
       containers:
       - name: flaskr
-        image: deepvoid/flaskr
+        image: nicdevops/flaskr
         ports:
         - containerPort: 8080
         resources:
